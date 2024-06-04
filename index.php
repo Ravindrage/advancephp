@@ -82,20 +82,42 @@ $condition = Null ;
 
 class bike {
 	
-    $color ; 
-	$name	; 
+    public $color ;
+	public $name ;
 	
 	function setcolor($color2)
 	{
 		$this->color = $color2 ; 		
 	}
 	
-	function getname($name)
+	function setname($name)
 	{
-		$this->name = $name
+		$this->name = $name;
+	}
+	
+	function getname()
+	{
+		echo $this->name ;
+	}
+	
+	function getcolor()
+	{
+		echo $this->color ; 		
 	}
 		
 }
+
+
+$object1 = new bike();
+
+$object1->setcolor("Red");
+
+echo $object1->getcolor();
+echo '<br>';
+
+$object2 = new bike();
+$object2->setname("hariom");
+echo $object2->getname();
 
 
 
